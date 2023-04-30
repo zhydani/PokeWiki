@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @main
-struct MVVMPokedexApp: App {
+struct PokeWikiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
