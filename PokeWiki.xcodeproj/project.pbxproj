@@ -12,8 +12,6 @@
 		E11C242429FEE14C0003271E /* PokeWiki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E11C242229FEE14C0003271E /* PokeWiki.xcdatamodeld */; };
 		E11C242629FEE14E0003271E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11C242529FEE14E0003271E /* Assets.xcassets */; };
 		E11C242929FEE14E0003271E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11C242729FEE14E0003271E /* LaunchScreen.storyboard */; };
-		E127B64529FEF168000FF9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127B64429FEF168000FF9D6 /* Main.storyboard */; };
-		E127B64729FEF187000FF9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B64629FEF187000FF9D6 /* ViewController.swift */; };
 		E127B64F29FEF2F4000FF9D6 /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B64D29FEF2F4000FF9D6 /* PokemonListViewController.swift */; };
 		E127B65029FEF2F4000FF9D6 /* PokemonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E127B64E29FEF2F4000FF9D6 /* PokemonListViewController.xib */; };
 		E127B65329FEF3EE000FF9D6 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B65229FEF3EE000FF9D6 /* PokemonTableViewCell.swift */; };
@@ -30,8 +28,6 @@
 		E11C242529FEE14E0003271E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11C242829FEE14E0003271E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E11C242A29FEE14E0003271E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E127B64429FEF168000FF9D6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
-		E127B64629FEF187000FF9D6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../.Trash/ViewController.swift; sourceTree = "<group>"; };
 		E127B64D29FEF2F4000FF9D6 /* PokemonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewController.swift; sourceTree = "<group>"; };
 		E127B64E29FEF2F4000FF9D6 /* PokemonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonListViewController.xib; sourceTree = "<group>"; };
 		E127B65229FEF3EE000FF9D6 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,8 +70,6 @@
 				E127B65429FEF627000FF9D6 /* models */,
 				E127B65129FEF3C3000FF9D6 /* cell */,
 				E127B64C29FEF2D9000FF9D6 /* scenes */,
-				E127B64429FEF168000FF9D6 /* Main.storyboard */,
-				E127B64629FEF187000FF9D6 /* ViewController.swift */,
 				E11C241929FEE14C0003271E /* AppDelegate.swift */,
 				E11C241B29FEE14C0003271E /* SceneDelegate.swift */,
 				E11C242529FEE14E0003271E /* Assets.xcassets */,
@@ -183,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E127B64529FEF168000FF9D6 /* Main.storyboard in Resources */,
 				E11C242929FEE14E0003271E /* LaunchScreen.storyboard in Resources */,
 				E127B65029FEF2F4000FF9D6 /* PokemonListViewController.xib in Resources */,
 				E11C242629FEE14E0003271E /* Assets.xcassets in Resources */,
@@ -201,7 +194,6 @@
 				E127B65929FEF774000FF9D6 /* PokemonService.swift in Sources */,
 				E11C242429FEE14C0003271E /* PokeWiki.xcdatamodeld in Sources */,
 				E11C241A29FEE14C0003271E /* AppDelegate.swift in Sources */,
-				E127B64729FEF187000FF9D6 /* ViewController.swift in Sources */,
 				E127B65329FEF3EE000FF9D6 /* PokemonTableViewCell.swift in Sources */,
 				E127B64F29FEF2F4000FF9D6 /* PokemonListViewController.swift in Sources */,
 				E11C241C29FEE14C0003271E /* SceneDelegate.swift in Sources */,
