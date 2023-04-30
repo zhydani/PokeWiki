@@ -16,6 +16,7 @@
 		E127B67129FF051E000FF9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127B67029FF051E000FF9D6 /* Assets.xcassets */; };
 		E127B67429FF0563000FF9D6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B67329FF0563000FF9D6 /* ViewModel.swift */; };
 		E127B67629FF05D6000FF9D6 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B67529FF05D6000FF9D6 /* PokemonView.swift */; };
+		E127B67829FF0624000FF9D6 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127B67729FF0624000FF9D6 /* PokemonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E127B67029FF051E000FF9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E127B67329FF0563000FF9D6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E127B67529FF05D6000FF9D6 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
+		E127B67729FF0624000FF9D6 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				E127B66429FF025C000FF9D6 /* ContentView.swift */,
 				E127B67529FF05D6000FF9D6 /* PokemonView.swift */,
+				E127B67729FF0624000FF9D6 /* PokemonDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E127B65F29FF0133000FF9D6 /* PokeWikiApp.swift in Sources */,
+				E127B67829FF0624000FF9D6 /* PokemonDetailView.swift in Sources */,
 				E127B66229FF0196000FF9D6 /* Helpers.swift in Sources */,
 				E127B66B29FF03EB000FF9D6 /* PokemonManager.swift in Sources */,
 				E127B66529FF025C000FF9D6 /* ContentView.swift in Sources */,
