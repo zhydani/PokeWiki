@@ -12,4 +12,6 @@ Wikipédia de Pokémon
 
 > *"Pokemon! Temos que pegar eu sei"* - Pokémon
 
+## Funcionalidades
+O Aplicativo apresenta uma tela principal onde contém uma lista vasta de Pokémons, que, ao clicar em um pokémon específico, o app irá te direcionar para uma nova tela contendo detalhes daquele Pokémon, como altura e peso.
 
