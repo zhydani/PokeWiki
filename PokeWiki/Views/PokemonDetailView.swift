@@ -12,13 +12,37 @@ struct PokemonDetailView: View {
     let pokemon: Pokemon
     
     var body: some View {
-        VStack {
-            PokemonView(pokemon: pokemon)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 10) {
-                Text("**ID**: \(vm.pokemonDetails?.id ?? 0)")
-                Text("**Weight**: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) KG")
-                Text("**Height**: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) M")
+            VStack {
+                PokemonView(pokemon: pokemon)
+                
+                VStack(spacing: 10) {
+                    HStack {
+                        Image(systemName: "number.circle")
+                        Text("\(vm.pokemonDetails?.id ?? 0)")
+                            .font(.title)
+                    }
+                    
+                    HStack {
+                        Image(systemName: "weight")
+                        Text("\(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) KG")
+                            .font(.subheadline)
+                    }
+                    
+                    HStack {
+                        Image(systemName: "ruler")
+                        Text("\(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) M")
+                            .font(.subheadline)
+                    }
+                    
+                }
+                .padding()
+                .background(Color.white.opacity(0.8))
+                .cornerRadius(10)
+                .shadow(radius: 5)
                 
             }
             .padding()
