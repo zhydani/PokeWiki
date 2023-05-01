@@ -12,19 +12,20 @@ class ViewModel: ObservableObject {
     
     @Published var pokemonList = [Pokemon]()
     @Published var pokemonDetails: DetailPokemon?
+    // text para o campo de busca de pokemon especifico
     @Published var searchText = ""
     
-    // Used with searchText to filter pokemon results
+    // pega o text para filtrar os pokemons especificos e retornar ele na lista
     var filteredPokemon: [Pokemon] {
                 return searchText == "" ? pokemonList : pokemonList.filter { $0.name.contains(searchText.lowercased()) }
             }
     
     init() {
+        // a lista receber os pokemons do json
         self.pokemonList = pokemonManager.getPokemon()
     }
     
-    
-    // Get the index of a pokemon ( index + 1 = pokemon id)
+    // pega o index do array de pokemons ( index + 1 = pokemon id) para retornar o detalhe na api
     func getPokemonIndex(pokemon: Pokemon) -> Int {
         if let index = self.pokemonList.firstIndex(of: pokemon) {
             return index + 1
@@ -32,7 +33,7 @@ class ViewModel: ObservableObject {
         return 0
     }
     
-    // Get specific details for a pokemon
+    // pegando os detalhes do pokemon especifico
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
         
@@ -45,7 +46,7 @@ class ViewModel: ObservableObject {
         }
     }
     
-    // Formats the Height or the Weight of a given pokemon
+    // Format da altura e do peso do pokemon no detalhe
     func formatHW(value: Int) -> String {
         let dValue = Double(value)
         let string = String(format: "%.2f", dValue / 10)
