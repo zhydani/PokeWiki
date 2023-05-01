@@ -8,19 +8,20 @@
 import Foundation
 
 extension Bundle {
+    // Realizar o decod do json estatico de pokemons
     func decode<T: Decodable>(file: String) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
-            fatalError("Could not find \(file) in bundle.")
+            fatalError("Nao foi possivel achar o arquivo \(file) no projeto.")
         }
         
         guard let data = try? Data(contentsOf: url) else {
-            fatalError("Could not load \(file) from bundle.")
+            fatalError("Nao foi possivel ler o arquivo \(file) do projeto.")
         }
         
         let decoder = JSONDecoder()
         
         guard let loadedData = try? decoder.decode(T.self, from: data) else {
-            fatalError("Could not decode \(file) from bundle.")
+            fatalError("Nao foi possivel realizar o decod do arquivo \(file) do projeto.")
         }
         
         return loadedData
@@ -31,16 +32,15 @@ extension Bundle {
             
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 guard let data = data else {
-                    // If there is an error, return the error.
+                    // Se tiver erro, retorna o erro
                     if let error = error { failure(error) }
                     return }
                 
                 do {
                     let serverData = try JSONDecoder().decode(T.self, from: data)
-                    // Return the data successfully from the server
+                    // Retorna sucesso do json do server
                     completion((serverData))
                 } catch {
-                    // If there is an error, return the error.
                     failure(error)
                 }
             }.resume()
