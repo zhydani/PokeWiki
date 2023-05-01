@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    // exibir do viewmodel
     @StateObject var vm = ViewModel()
     
     private let adaptiveColumns = [
@@ -16,6 +17,7 @@ struct ContentView: View {
     ]
     
     var body: some View {
+        // para navegar entre as telas de detalhe e lista
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: adaptiveColumns, spacing: 10) {
@@ -27,7 +29,7 @@ struct ContentView: View {
                     }
                 }
                 .animation(.easeInOut(duration: 0.3), value: vm.filteredPokemon.count)
-                .navigationTitle("PokemonUI")
+                .navigationTitle("PokeWiki")
                 .navigationBarTitleDisplayMode(.inline)
             }
             .searchable(text: $vm.searchText)
