@@ -12,19 +12,42 @@ struct PokemonDetailView: View {
     let pokemon: Pokemon
     
     var body: some View {
-        VStack {
-            PokemonView(pokemon: pokemon)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 10) {
-                Text("*ID*: \(vm.pokemonDetails?.id ?? 0)")
-                HStack {
-                    Image(systemName: "scalemass") // Usando o símbolo "scalemass" para o ícone de peso
-                    Text("*Weight*: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) KG")
+            VStack {
+                PokemonView(pokemon: pokemon)
+                
+                VStack(spacing: 10) {
+                    HStack {
+                        Image(systemName: "number.circle")
+                            .font(.system(size: 20))
+                        Text("\(vm.pokemonDetails?.id ?? 0)")
+                            .font(.title)
+                    }
+                    
+                    HStack {
+                        Image(systemName: "scalemass")
+                            .foregroundColor(.red) // adicionando cor vermelha ao ícone de peso
+                            .font(.system(size: 20)) // aumentando o tamanho do ícone de peso
+                        Text("*Weight*: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) KG")
+                            .font(.title2) // usando fonte "title2" para o peso
+                    }
+                    HStack {
+                        Image(systemName: "ruler")
+                            .foregroundColor(.green) // adicionando cor verde ao ícone de altura
+                            .font(.system(size: 20)) // aumentando o tamanho do ícone de altura
+                        Text("*Height*: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) M")
+                            .font(.title2) // usando fonte "title2" para a altura
+                    }
+                    
                 }
-                HStack {
-                    Image(systemName: "ruler") // Usando o símbolo "ruler" para o ícone de altura
-                    Text("*Height*: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) M")
-                }
+                .padding()
+                .background(Color.white.opacity(0.8))
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                
             }
             .padding()
         }
